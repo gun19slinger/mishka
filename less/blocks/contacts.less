@@ -1,0 +1,172 @@
+.contacts {
+  .container-fluid();
+  padding: 40px 30px;
+}
+
+.contacts__title {
+  .title();
+  margin-bottom: 25px;
+}
+
+.contacts__items {
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  color: #444;
+  line-height: 30px;
+  border-collapse: collapse;
+}
+
+.contacts__item-name,
+.contacts__item-value {
+  padding-bottom: 30px;
+}
+
+.contacts__item-name {
+  vertical-align: top;
+}
+
+.contacts__item-value a {
+  .mail-link();
+}
+
+.contacts__map {
+  position: relative;
+  margin: 0 -30px;
+  text-align: center;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 165px;
+    left: 50%;
+    width: 67px;
+    height: 100px;
+    margin-left: -37px;
+    background: url("../img/icon-map-pin.svg");
+  }
+}
+
+.contacts__map img {
+  min-width: 320px;
+  height: 457px;
+}
+
+.contacts__write {
+  margin-top: 40px;
+}
+
+@media @tablet-width {
+  .contacts {
+    position: relative;
+    padding: 65px 0 60px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 46px;
+      right: 3px;
+      width: 47px;
+      height: 81px;
+      background: url("../img/icon-flag.svg");
+    }
+  }
+
+  .contacts__title {
+    margin-bottom: 50px;
+  }
+
+  .contacts__items tbody {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+  }
+
+  .contacts__items tr {
+    display: flex;
+    width: 50%;
+  }
+
+  .contacts__item-name {
+    width: 23%;
+  }
+
+  .contacts__item-name,
+  .contacts__item-value {
+    padding-bottom: 60px;
+  }
+
+  .contacts__map {
+    margin: 0 -50px;
+  }
+
+  .contacts__map img {
+    max-width: 768px;
+    height: 457px;
+  }
+
+  .contacts__write {
+    width: 230px;
+    margin-top: 55px;
+  }
+}
+
+@media @desktop-width {
+  .contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 637px;
+    padding: 75px 0 105px 175px;
+    box-sizing: border-box;
+
+    &::before {
+      top: 132px;
+      left: 63px;
+    }
+  }
+
+  .contacts__title {
+    width: 50%;
+    margin: 70px 0 0;
+  }
+
+  .contacts__items {
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .contacts__items tr {
+    width: 100%;
+  }
+
+  .contacts__item-name,
+  .contacts__item-value {
+    padding-bottom: 30px;
+  }
+
+  .contacts__item-name {
+    width: 15%;
+  }
+
+  .contacts__map {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 50%;
+    margin: 0;
+
+    &::after {
+      margin-left: -22px;
+    }
+  }
+
+  .contacts__map img {
+    max-width: 525px;
+    height: 457px;
+  }
+
+  .contacts__write {
+    margin: 0;
+  }
+}

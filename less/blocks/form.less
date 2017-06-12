@@ -1,0 +1,369 @@
+.form {
+  padding: 0 30px;
+}
+
+.form__list {
+  .list-style();
+  font-size: 0;
+}
+
+.form__group {
+  .container-fluid();
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 35px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 19px;
+  border: none;
+  border-top: 1px solid #62d1ba;
+
+  &--textarea {
+    margin-bottom: 55px;
+  }
+}
+
+.form__group-title {
+  min-width: 60px;
+  padding-right: 20px;
+  font-weight: 400;
+  font-size: 17px;
+  color: #63d1bb;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.form__order-type {
+  position: relative;
+  margin-top: 25px;
+  padding: 14px 0 14px 60px;
+
+  &:hover .form__radio-indicator {
+    border-color: #62d1ba;
+  }
+
+  &:active .form__radio-indicator {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.form__radio {
+  display: none;
+
+  &:checked + .form__radio-indicator::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    background: #62d1ba;
+    border-radius: 50%;
+  }
+}
+
+.form__radio-indicator {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 40px;
+  height: 42px;
+  margin-top: -21px;
+  border: 2px solid #444;
+  border-radius: 50%;
+}
+
+.form__order-color {
+  position: relative;
+  margin-top: 25px;
+  padding: 12px 0 12px 60px;
+
+  &:hover .form__checkbox-indicator {
+    border-color: #62d1ba;
+  }
+
+  &:active .form__checkbox-indicator {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.form__checkbox {
+  display: none;
+
+  &:checked + .form__checkbox-indicator::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 17px;
+    margin: -8px 0 0 -11px;
+    background: url("../img/icon-tick.svg") no-repeat bottom center;
+  }
+}
+
+.form__checkbox-indicator {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 40px;
+  height: 41px;
+  margin-top: -20px;
+  border: 2px solid #444;
+}
+
+.form__text-field {
+  width: 260px;
+}
+
+.form__field-name {
+  display: block;
+  width: 100%;
+  padding-top: 25px;
+}
+
+.form__text-field input {
+  padding: 13px 0;
+  font-family: OpenSans;
+  font-weight: 400;
+  font-size: 17px;
+  color: #444;
+  line-height: 30px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border-color: #62d1ba;
+  }
+}
+
+.form__text-field input[type="phone"] {
+  background: url("../img/icon-phone.svg") no-repeat 100% 50%;
+
+  &:hover,
+  &:focus {
+    background: url("../img/icon-phone-hover.svg") no-repeat 100% 50%;
+  }
+}
+
+.form__text-field input[type="email"] {
+  background: url("../img/icon-mail.svg") no-repeat 100% 50%;
+
+  &:hover,
+  &:focus {
+    background: url("../img/icon-mail-hover.svg") no-repeat 100% 50%;
+  }
+}
+
+.form__textarea {
+  width: 100%;
+  padding-top: 35px;
+}
+
+.form__textarea textarea {
+  width: 100%;
+  height: 145px;
+  padding: 10px 15px;
+  font-family: OpenSans;
+  font-weight: 400;
+  font-size: 17px;
+  color: #444;
+  line-height: 19px;
+  background: transparent;
+  border: 2px solid #000;
+  outline: none;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    border-color: #62d1ba;
+  }
+}
+
+.form__addnl-info {
+  display: none;
+}
+
+@media @tablet-width {
+  .form {
+    padding: 0;
+  }
+
+  .form__item--grey {
+    background: #f1f1f1;
+  }
+
+  .form__group {
+    position: relative;
+    padding: 50px 0 50px 167px;
+    font-size: 18px;
+    line-height: 18px;
+    border: none;
+    box-sizing: border-box;
+
+    &--checkbox {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-top: 25px;
+    }
+
+    &--user-name {
+      padding-top: 30px;
+    }
+
+    &--phone {
+      padding-top: 30px;
+      padding-bottom: 0;
+    }
+
+    &--email {
+      padding-top: 0;
+
+      .form__group-title {
+        top: 38px;
+      }
+    }
+
+    &--textarea {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__group-title {
+    position: absolute;
+    top: 68px;
+    left: 2px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .form__order-type {
+    margin: 0 0 25px;
+    padding: 17px 0 17px 80px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__radio {
+    &:checked + .form__radio-indicator::before {
+      top: 15px;
+      left: 15px;
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .form__radio-indicator {
+    width: 52px;
+    height: 52px;
+    margin-top: -26px;
+  }
+
+  .form__order-color {
+    width: 34%;
+    padding: 17px 0 17px 80px;
+  }
+
+  .form__checkbox {
+    &:checked + .form__checkbox-indicator::before {
+      width: 33px;
+      height: 22px;
+      margin: -11px 0 0 -16px;
+    }
+  }
+
+  .form__checkbox-indicator {
+    width: 54px;
+    height: 52px;
+    margin-top: -26px;
+  }
+
+  .form__text-field {
+    display: flex;
+    width: 100%;
+  }
+
+  .form__field-name {
+    display: inline;
+    width: auto;
+    padding: 35px 25px 0 0;
+  }
+
+  .form__text-field input {
+    flex-grow: 1;
+    padding: 28px 0 12px 0;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .form__textarea {
+    padding-top: 0;
+  }
+
+  .form__button-wrapper {
+    .container-fluid();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form__submit {
+    width: 230px;
+    margin: 0;
+  }
+
+  .form__addnl-info {
+    display: inline;
+    font-weight: 400;
+    font-size: 16px;
+    color: #444;
+    line-height: 30px;
+  }
+}
+
+@media @desktop-width {
+  .form__group {
+    padding-left: 175px;
+    padding-right: 175px;
+
+    &--textarea {
+      padding-bottom: 90px;
+    }
+
+    &--checkbox {
+      padding-right: 0;
+    }
+  }
+
+  .form__group-title {
+    width: 175px;
+    text-align: center;
+  }
+
+  .form__order-color {
+    width: 23%;
+  }
+
+  .form__text-field {
+    box-sizing: border-box;
+  }
+
+  .form__textarea {
+    box-sizing: border-box;
+  }
+
+  .form__button-wrapper {
+    padding: 0 175px;
+    box-sizing: border-box;
+  }
+}
+
+
+

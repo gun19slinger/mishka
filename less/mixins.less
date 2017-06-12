@@ -1,0 +1,118 @@
+.clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.container() {
+  width: 260px;
+  margin: 0 auto;
+
+ @media @tablet-width {
+   width: 668px;
+ }
+
+  @media @desktop-width {
+    width: 1050px;
+  }
+}
+
+.container-fluid() {
+  width: auto;
+  margin: 0 auto;
+
+  @media @tablet-width {
+    width: 87%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.list-style() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.title() {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+
+  @media @tablet-width {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  @media @desktop-width {
+    font-size: 50px;
+    line-height: 57px;
+  }
+}
+
+.inner-page-block-title() {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media @tablet-width {
+    font-size: 18px;
+  }
+}
+
+.zigzag() {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: url("../img/bg-zigzag-line.svg");
+    background-size: contain;
+  }
+
+  @media @tablet-width {
+    &::after {
+      content: "";
+      height: 17px;
+    }
+  }
+
+  @media @desktop-width {
+    &::after {
+      content: "";
+      height: 23px;
+    }
+  }
+}
+
+.mail-link() {
+  font-weight: 400;
+  font-size: 14px;
+  color: #444;
+  line-height: 30px;
+  font-style: normal;
+  text-decoration: none;
+  border-bottom: 1px solid #46c1ae;
+
+  @media @tablet-width {
+    font-size: 16px;
+  }
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    color: rgba(70, 193, 174, 0.3);
+    border-bottom-color: rgba(70, 193, 174, 0.3);
+  }
+}

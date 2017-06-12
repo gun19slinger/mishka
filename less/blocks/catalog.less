@@ -1,0 +1,29 @@
+.catalog {
+  .container-fluid();
+  padding: 30px;
+}
+
+.catalog__list {
+  .list-style();
+}
+
+@media @tablet-width {
+  .catalog {
+    padding: 65px 0 54px;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media @desktop-width {
+  .catalog {
+    padding: 110px 0 60px;
+  }
+
+  .catalog__list {
+    justify-content: space-between;
+  }
+}

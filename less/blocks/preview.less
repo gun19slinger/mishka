@@ -1,0 +1,202 @@
+.preview {
+  background: #fafafa url("../img/hero-mobile@1x.jpg") no-repeat center top;
+
+  @media (max-width: 768px) and (min-resolution: 144dpi),
+  (max-width: 768px) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 575px auto;
+
+    &--inner {
+      background: #f1f1f1;
+    }
+  }
+
+  &--inner {
+    background: #f1f1f1;
+  }
+}
+
+.preview__wrapper {
+  .container-fluid();
+}
+
+.preview__page-title {
+  .title();
+  width: 250px;
+  margin: 0 auto;
+  padding: 85px 0 125px;
+  color: #231f20;
+  text-align: center;
+
+  &--inner {
+    padding: 65px 0 75px;
+  }
+}
+
+.preview__list {
+  .list-style();
+  font-size: 0;
+}
+
+.preview__item {
+  position: relative;
+}
+
+.preview__item a {
+  display: block;
+  padding: 30px 0 30px 30px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.preview__item-interior {
+  background: #63d1bb;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 36px;
+    width: 41px;
+    height: 62px;
+    margin-top: -31px;
+    background: url("../img/icon-interior.svg") no-repeat;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    background: #59d5bc;
+  }
+
+  &:hover::after {
+    opacity: 0.7;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background: #59d5bc;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.preview__item-toy {
+  background: #56c3b2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 27px;
+    width: 60px;
+    height: 61px;
+    margin-top: -31px;
+    background: url("../img/icon-toy.svg") no-repeat;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    background: #46c1ae;
+  }
+
+  &:hover::after {
+    opacity: 0.7;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background: #46c1ae;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+@media @tablet-width {
+  .preview {
+    position: relative;
+    background: #fafafa url("../img/hero-desktop@1x.jpg") no-repeat center top;
+
+    @media (min-width: 768px) and (min-resolution: 144dpi),
+    (min-width: 768px) and (min-resolution: 1.5dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+      background-size: 1150px auto;
+
+      &--inner {
+        background: #f1f1f1;
+      }
+    }
+    
+    &--inner {
+      background: #f1f1f1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      background: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+    }
+  }
+
+  .preview__page-title {
+    width: auto;
+    padding: 145px 0 385px;
+
+    &--inner {
+      padding: 90px 0 95px;
+    }
+  }
+
+  .preview__list {
+    display: flex;
+  }
+
+  .preview__item {
+    width: 50%;
+  }
+
+  .preview__item a {
+    padding: 30px 0 40px 35px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &::after {
+      margin-top: -36px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .preview {
+    &::after {
+      height: 34px;
+    }
+  }
+
+  .preview__page-title {
+    padding: 151px 0 365px;
+
+    &--inner {
+      padding: 90px 0 120px;
+    }
+  }
+
+  .preview__item a {
+    padding: 30px 0 45px 35px;
+
+    &::after {
+      margin-top: -39px;
+    }
+  }
+}
